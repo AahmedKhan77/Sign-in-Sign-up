@@ -10,30 +10,191 @@
 <body>
    <div class="container">
     <div class="form-box">
-        <h1>Sign-up</h1>
-        <form>
+        <h1 id="title">Sign-up</h1>
+        <form id="myForm">
             <div class="input-group">
-                <div class="input-field">
+                <div class="input-field" id="nameField">
                     <i class="fa-solid fa-user" style="color: #000000;"></i>
                     <input type="text" placeholder="Name">
                 </div>
-                  <div class="input-field">
+
+                <div class="input-field"  id="nameFather">
+                    <i class="fa-solid fa-user" style="color: #000000;"></i>
+                    <input type="text" placeholder="Father Name">
+                </div>
+                
+                <div class="input-field" id="DOB">
+                    <i class="fa-solid fa-user" style="color: #000000;"></i>
+                    <input type="date" placeholder="Date of Birth">
+                </div>
+
+                <div class="input-field" id="Phone">
+                    <i class="fa-solid fa-user" style="color: #000000;"></i>
+                    <input type="number" placeholder="Phone Number">
+                </div>
+
+                <div class="input-field" id="Postal">
+                    <i class="fa-solid fa-user" style="color: #000000;"></i>
+                    <input type="text" placeholder="Postal Code">
+                </div>
+
+                <div class="input-field" id="Adress">
+                    <i class="fa-solid fa-user" style="color: #000000;"></i>
+                    <input type="text" placeholder="Address">
+                </div>
+
+                <div class="input-field" id="Email">
                     <i class="fa-solid fa-envelope" style="color: #000000;"></i>
                     <input type="email" placeholder="Email">
-                  </div>
-                    <div class="input-field">
-                        <i class="fa-solid fa-lock" style="color: #000000;"></i>
-                    <input type="password" placeholder="Password">
-
                 </div>
-                <p>Forgot Password ? <a href="#">Click Here</a></p>
-            </div>
-            <div class="btn-field">
-                <button type="button">Sign-up</button>
-                <button type="button" class="disable">Sign-in</button>
+
+                <div class="input-field" id="pass">
+                    <i class="fa-solid fa-lock" style="color: #000000;"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+
+                <div class="input-field" id="pass1">
+                    <i class="fa-solid fa-lock" style="color: #000000;"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+
+                <div class="input-field" id="pass2">
+                    <i class="fa-solid fa-lock" style="color: #000000;"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+
+                <div class="input-field" id="pass3">
+                    <i class="fa-solid fa-lock" style="color: #000000;"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+
+                <div class="input-field" id="pass4">
+                    <i class="fa-solid fa-lock" style="color: #000000;"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+
+                <div class="input-field" id="pass5">
+                    <i class="fa-solid fa-lock" style="color: #000000;"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+
+                <div class="input-field" id="pass6">
+                    <i class="fa-solid fa-lock" style="color: #000000;"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+
+                <div class="input-field" id="pass7">
+                    <i class="fa-solid fa-lock" style="color: #000000;"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+
+                <div class="input-field" id="pass8">
+                    <i class="fa-solid fa-lock" style="color: #000000;"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+
+                <div class="input-field" id="pass9">
+                    <i class="fa-solid fa-lock" style="color: #000000;"></i>
+                    <input type="password" placeholder="Password">
+                </div>
+
+                <!-- ... Other input fields ... -->
+
+                <div class="btn-field1"><button type="submit" id="submit">Submit</button></div>
+
+                <p>Forgot Password? <a href="#">Click Here</a></p>
+                <div class="btn-field">
+                    <button type="button" id="signupBtn">Sign-up</button>
+                    <button type="button" class="disable" id="signinBtn">Sign-in</button>
+                </div>
             </div>
         </form>
     </div>
    </div> 
+   <script>
+       let signupBtn = document.getElementById("signupBtn");
+       let signinBtn = document.getElementById("signinBtn");
+       let form = document.getElementById("myForm");
+
+       form.addEventListener('submit', function (event) {
+           event.preventDefault();
+
+           let nameValue = document.getElementById('nameField').getElementsByTagName('input')[0].value;
+           let fatherNameValue = document.getElementById('nameFather').getElementsByTagName('input')[0].value;
+           let dobValue = document.getElementById('DOB').getElementsByTagName('input')[0].value;
+           let phoneValue = document.getElementById('Phone').getElementsByTagName('input')[0].value;
+           let postalValue = document.getElementById('Postal').getElementsByTagName('input')[0].value;
+           let addressValue = document.getElementById('Adress').getElementsByTagName('input')[0].value;
+           let emailValue = document.getElementById('Email').getElementsByTagName('input')[0].value;
+           let passValue = document.getElementById('pass').getElementsByTagName('input')[0].value;
+
+           console.log('Name:', nameValue);
+           console.log('Father Name:', fatherNameValue);
+           console.log('Date of Birth:', dobValue);
+           console.log('Phone Number:', phoneValue);
+           console.log('Postal Code:', postalValue);
+           console.log('Address:', addressValue);
+           console.log('Email:', emailValue);
+           console.log('Password:', passValue);
+
+           console.log('Password 1:', document.getElementById('pass1').getElementsByTagName('input')[0].value);
+           console.log('Password 2:', document.getElementById('pass2').getElementsByTagName('input')[0].value);
+           console.log('Password 3:', document.getElementById('pass3').getElementsByTagName('input')[0].value);
+           console.log('Password 4:', document.getElementById('pass4').getElementsByTagName('input')[0].value);
+           console.log('Password 5:', document.getElementById('pass5').getElementsByTagName('input')[0].value);
+           console.log('Password 6:', document.getElementById('pass6').getElementsByTagName('input')[0].value);
+           console.log('Password 7:', document.getElementById('pass7').getElementsByTagName('input')[0].value);
+           console.log('Password 8:', document.getElementById('pass8').getElementsByTagName('input')[0].value);
+           console.log('Password 9:', document.getElementById('pass9').getElementsByTagName('input')[0].value);
+       });
+
+        signinBtn.onclick = function() {
+        nameField.style.maxHeight = "0";
+        DOB.style.maxHeight = "0";
+        Phone.style.maxHeight = "0";
+        nameFather.style.maxHeight = "0";
+        Postal.style.maxHeight = "0";
+        Adress.style.maxHeight = "0";
+        pass.style.maxHeight = "0px";
+        Email.style.maxHeight = "50px";
+        pass1.style.maxHeight = "50px";
+        pass2.style.maxHeight = "50px";
+        pass3.style.maxHeight = "50px";
+        pass4.style.maxHeight = "50px";
+        pass5.style.maxHeight = "60px";
+        pass6.style.maxHeight = "70px";
+        pass7.style.maxHeight = "80px";
+        pass8.style.maxHeight = "90px";
+        pass9.style.maxHeight = "100px";
+        title.innerHTML="Sign-In";
+        signupBtn.classList.add("disable");
+        signinBtn.classList.remove("disable");
+           }
+        
+        
+       signupBtn.onclick = function() {
+        nameField.style.maxHeight = "60px";
+        nameFather.style.maxHeight = "70px";
+        DOB.style.maxHeight = "80px";
+        Phone.style.maxHeight = "90px";
+        Postal.style.maxHeight = "100px";
+        Adress.style.maxHeight = "110px";
+        pass.style.maxHeight = "120px";
+        Email.style.maxHeight = "0px";
+        pass1.style.maxHeight = "0px";
+        pass2.style.maxHeight = "0px";
+        pass3.style.maxHeight = "0px";
+        pass4.style.maxHeight = "0px";
+        pass5.style.maxHeight = "0px";
+        pass6.style.maxHeight = "0px";
+        pass7.style.maxHeight = "0px";
+        pass8.style.maxHeight = "0px";
+        pass9.style.maxHeight = "0px";
+        title.innerHTML="Sign-up";
+        signupBtn.classList.remove("disable");
+        signinBtn.classList.add("disable");
+           }
+
+    </script>
 </body>
 </html>
